@@ -26,7 +26,7 @@
                             </div>
                             <div class="column q-my-sm">
                                 <div class="text-white q-mb-xs">Name*</div>
-                                <q-input v-model="text" class="text-white q-px-sm" dense
+                                <q-input v-model="name" class="text-white q-px-sm" dense outlined
                                     style="width: 100%;   border-radius: 8px; border: 0.25px solid rgba(175, 183, 194, 0.45); box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
                                     placeholder="Enter your name" />
 
@@ -34,7 +34,7 @@
                             </div>
                             <div class="column q-my-sm">
                                 <div class="text-white q-mb-xs">Email*</div>
-                                <q-input v-model="text" class="text-white q-px-sm" dense
+                                <q-input v-model="email" class="text-white q-px-sm" dense
                                     style="width: 100%;   border-radius: 8px; border: 0.25px solid rgba(175, 183, 194, 0.45); box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
                                     placeholder="Enter your name" />
 
@@ -42,7 +42,7 @@
                             </div>
                             <div class="column q-my-sm">
                                 <div class="text-white q-mb-xs">Password*</div>
-                                <q-input v-model="text" class="text-white q-px-sm" dense
+                                <q-input v-model="password" class="text-white q-px-sm" dense
                                     style="width: 100%;   border-radius: 8px; border: 0.25px solid rgba(175, 183, 194, 0.45); box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
                                     placeholder="Enter your name" />
                                 <span class="q-mt-sm text-weight-thin" style="color: #667085;">
@@ -94,8 +94,8 @@
 
                                         </span>
                                     </div>
-                                    <div class="q-pl-md q-pa-md q-mt-md text-white flex items-center"
-                                        style="width: 204.42px; height: 294.54px; flex-shrink: 0; border-radius: 6px; background: #191D24; ">
+                                    <div class="q-py-md q-pl-md q-mt-md text-white flex items-center"
+                                        style="width: 227.088px; height: 294.54px; flex-shrink: 0; border-radius: 6px; background: #191D24; ">
 
                                         <span class="text-bold q-mb-lg">
                                             Materiality
@@ -105,8 +105,8 @@
 
                                         </span>
                                         <div class="" style="overflow: hidden;">
-                                            <q-img class=" q-mr-sm"
-                                                style="background: url('../../public/data.png'); width: 360px; height: 120px; flex-shrink: 0; overflow: hidden;" />
+                                            <q-img class="" 
+                                                style="background: url('../../public/data.png'); background-repeat: no-repeat; width: 400px; height: 145px; flex-shrink: 0;" />
 
                                         </div>
 
@@ -119,7 +119,7 @@
                                     </span>
                                     <div class="flex q-mt-md">
                                         <div class="q-pl-md q-pa-md q-mt-sm q-mr-md text-white flex items-center"
-                                            style="width: 204.42px; height: 284.54px; flex-shrink: 0; border-radius: 6px; border: 0.25px solid rgba(175, 183, 194, 0.45); background: #191D24; ">
+                                            style="width: 204.42px; height: 284.54px; flex-shrink: 0; border-radius: 6px; background: #191D24; ">
 
                                             <span class="text-medium q-mb-lg">
                                                 Sustainability Report Assessment
@@ -137,19 +137,19 @@
                                         <div class=" text-white flex "
                                             style="width: 204.42px; height: 284.54px; flex-shrink: 0; border-radius: 6px; background: #191D24; ">
 
-                                            <q-img class="" src="chats.png" style=" width: 204px; height: 27    0px; " />
+                                            <q-img class="" src="chats.png" style=" width: 204px; height: 270px; " />
                                            
 
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="column justify-center q-pa-md text-white q-mt-md "
-                                            style="width: 204.42px; height: 59px;  border-radius: 6px; background: #191D24; ">
+                                        <div class="column q-pa-md justify-center  text-white q-mt-md "
+                                            style="width: 204.42px; height: 69px;  border-radius: 6px; background: #191D24; ">
                                             <q-img class="q-mr-sm item-center" src="sync.svg" width="24px" height="24px" /> 
 
-                                            <span class="text-medium q-mb-lg flex item-center">
-                                                Peer, Sectoral and Global Benchmarking
-                                            </span>
+                                            <div class="text-medium items-center">
+                                                Peer, Sectoral and <br>Global Benchmarking
+                                            </div>
                                             
                                            
 
