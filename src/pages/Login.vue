@@ -1,9 +1,9 @@
 <template>
     <div class="">
-        <div class="row bg-black">
-            <div class="col bg-primary flex flex-column q-pa-sm">
-                <div class="column justify-between" style="width: 100%;">
-                    <div class="row align-center items-center text-white text-center q-mb-lg">
+        <div class=" " style="background: #181A20; height: 100vh;">
+            <div class=" q-pa-sm">
+                <div class="justify-between items-center ">
+                    <div class="row align-center justify-center items-center text-white text-center q-mb-lg">
                         <div class="">
                             <q-img src="icon.svg" width="62.19px" height="22px"></q-img>
                         </div>
@@ -19,52 +19,74 @@
                         </div>
                     </div>
                     <!-- Center Column -->
-                    <div class="q-mt-xl items-center">
-                        <div class="column " style="padding: 0% 20%;">
-                            <div class="text-h4 text-weight-bold text-white q-mb-lg">
-                                Sign up for free
-                            </div>
-                            <div class="column q-my-sm">
-                                <div class="text-white q-mb-xs">Name*</div>
-                                <q-input v-model="name" class="text-white q-px-sm" dense outlined
-                                    style="width: 100%;   border-radius: 8px; border: 0.25px solid rgba(175, 183, 194, 0.45); box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
-                                    placeholder="Enter your name" />
-
-
-                            </div>
-                            <div class="column q-my-sm">
-                                <div class="text-white q-mb-xs">Email*</div>
-                                <q-input v-model="email" class="text-white q-px-sm" dense
-                                    style="width: 100%;   border-radius: 8px; border: 0.25px solid rgba(175, 183, 194, 0.45); box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
-                                    placeholder="Enter your name" />
-
-
-                            </div>
-                            <div class="column q-my-sm">
-                                <div class="text-white q-mb-xs">Password*</div>
-                                <q-input v-model="password" class="text-white q-px-sm" dense
-                                    style="width: 100%;   border-radius: 8px; border: 0.25px solid rgba(175, 183, 194, 0.45); box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
-                                    placeholder="Enter your name" />
-                                <span class="q-mt-sm text-weight-thin" style="color: #667085;">
-                                    Must be atleast 8 characters
+                    <div class="q-mt-xl flex items-center justify-center " style="">
+                        <div class="column justify-center " style="width: 400px;">
+                            <div class=" flex  justify-center text-white q-mb-lg">
+                                <div>
+                                    <q-img src="login.svg" width="56px" height="56px" class="q-mb-md"></q-img>
+                                </div>
+                                <span class="text-h4 text-weight-bold">
+                                    Log in to your account
+                                </span> <br>
+                                <span class="text-weight-thin text-body2 q-mt-sm   text-h6 ">
+                                    Welcome back! Please enter your details.
                                 </span>
                             </div>
+                            <div class="column q-my-md">
+                                <div class="text-white q-mb-xs">Email*</div>
+                                <q-input v-model="email" class="text-white q-px-sm" dense
+                                    style="width: 100%;  background-color: #151515; border-radius: 8px; border: 0.25px solid rgba(175, 183, 194, 0.45); box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
+                                    placeholder="Enter your name" />
+
+
+                            </div>
+                            <div class="column q-mt-md">
+                                <div class="text-white q-mb-xs">Password*</div>
+                                <q-input v-model="password" type="password" :type="isPwd ? 'password' : 'text'"
+                                    class="text-white q-px-sm" dense
+                                    style="width: 100%; background-color: #151515;  border-radius: 8px; border: 0.25px solid rgba(175, 183, 194, 0.45); box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
+                                    placeholder="Enter your name">
+                                    <template v-slot:append>
+                                        <q-icon :name="isPwd ? 'visibility_off' : 'visibility'" class="cursor-pointer"
+                                            @click="isPwd = !isPwd" />
+                                    </template>
+                                </q-input>
+
+
+                            </div>
+                            <div class="q-my-md flex justify-between">
+                                <div class="" style="color: #667085;">
+                                    <q-checkbox dense v-model="remember_me" class="q-mr-sm " color="" /> Remember me for 30
+                                    days
+                                </div>
+                                <div class="text-weight-medium text-right" style="color: #176BF8;">
+                                    Forgot Password ?
+                                </div>
+                            </div>
                             <div>
-                                <q-btn no-caps class="q-mt-sm text-white" label="Get Started"
+                                <q-btn no-caps class=" text-white" label="Sign in"
                                     style="width: 100%; background-color: #176BF8;   border-radius: 8px;">
 
                                 </q-btn>
                             </div>
                             <div class="text-white flex justify-center q-mt-md ">
-                                Already have an account? <span class="text-[##176BF8] q-ml-sm" style="color: #176BF8;">Log
-                                    In </span>
+                                Don’t have an account? <span
+                                    class="text-[##176BF8] q-ml-sm cursor-pointer text-weight-medium" @click="'/signup'"
+                                    style="color: #176BF8;">Sign
+                                    up </span>
                             </div>
                         </div>
                     </div>
-                    <div class="text-white">
-                        <div class="" style="margin-top: -2%;">
-                            <span class=" q-mr-sm" style="color: #D7DFEF;">2023 </span> © <span class=" q-ml-sm"
-                                style="color: #176BF8;">Redblue </span>
+                    <div class="text-white q-mt-lg">
+
+                        <div class="text-white">
+                            <div class="" style=" text-align: right;">
+                                <q-img class=" q-mr-sm" src="mail-01.svg" width="16px" height="16px" /> <span
+                                    class="q-mt-sm text-weight-reular" style="color: #667085;">
+                                    help@reblue.ai
+                                </span>
+
+                            </div>
 
                         </div>
 
@@ -72,108 +94,7 @@
                 </div>
             </div>
 
-            <div class="col-7 bg-black flex flex-column  q-pa-md ">
-                <div class="column justify-between" style="width: 100%;">
-                    <div class="row align-center items-center text-white text-center">
 
-                    </div>
-                    <!-- Center Column -->
-                    <div class="q-mt-lg ">
-                        <div class="column ">
-                            <div class="row">
-                                <div class="col ">
-                                    <div class="q-pa-lg q-mr-xs text-white flex items-center"
-                                        style="width: 227.088px; height: 184.334px; flex-shrink: 0; border-radius: 6px; background: #191D24; ">
-                                        <q-img class=" q-mr-sm" src="elements.svg" width="20px" height="20px" />
-
-                                        <span class="text-bold">
-                                            Your disclosure completeness score is 72%
-                                        </span>
-                                        <span class="text-weight-light">
-                                            You are placed 2nd out of five peer companies.
-
-                                        </span>
-                                    </div>
-                                    <div class="q-py-md q-pl-md q-mt-md text-white flex items-center"
-                                        style="width: 227.088px; height: 294.54px; flex-shrink: 0; border-radius: 6px; background: #191D24; ">
-
-                                        <span class="text-bold q-mb-lg">
-                                            Materiality
-                                        </span>
-                                        <span class="q-mb-lg text-weight-light">
-                                            Compare your org’s materiality issues with global, sectoral materiality issues
-
-                                        </span>
-                                        <div class="" style="overflow: hidden;">
-                                            <q-img class="" 
-                                                style="background: url('../../public/data.png'); background-repeat: no-repeat; width: 400px; height: 145px; flex-shrink: 0;" />
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-8 " style="margin-top: -5%;">
-                                    <span class="text-weight-bolder text-h3 text-white ">
-                                        AI boost to your
-                                        ESG efforts
-                                    </span>
-                                    <div class="flex q-mt-md">
-                                        <div class="q-pl-md q-pa-md q-mt-sm q-mr-md text-white flex items-center"
-                                            style="width: 204.42px; height: 284.54px; flex-shrink: 0; border-radius: 6px; background: #191D24; ">
-
-                                            <span class="text-medium q-mb-lg">
-                                                Sustainability Report Assessment
-                                            </span>
-                                            <span class="q-mb-lg text-weight-light">
-                                                12 improvement areas identified
-
-                                            </span>
-                                            <div class="" style="margin-top: -30%; margin-left: -6%;">
-                                                <q-img class="" src="chart.svg" style=" width: 204px; height: 204px; " />
-
-                                            </div>
-
-                                        </div>
-                                        <div class=" text-white flex "
-                                            style="width: 204.42px; height: 284.54px; flex-shrink: 0; border-radius: 6px; background: #191D24; ">
-
-                                            <q-img class="" src="chats.png" style=" width: 204px; height: 270px; " />
-                                           
-
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="column q-pa-md justify-center  text-white q-mt-md "
-                                            style="width: 204.42px; height: 69px;  border-radius: 6px; background: #191D24; ">
-                                            <q-img class="q-mr-sm item-center" src="sync.svg" width="24px" height="24px" /> 
-
-                                            <div class="text-medium items-center">
-                                                Peer, Sectoral and <br>Global Benchmarking
-                                            </div>
-                                            
-                                           
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="text-white">
-                        <div class="" style="margin-top: -2%; text-align: right;">
-                            <q-img class=" q-mr-sm" src="mail-01.svg" width="16px" height="16px" /> <span
-                                class="q-mt-sm text-weight-thin" style="color: #667085;">
-                                help@reblue.ai
-                            </span>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </template>
@@ -184,7 +105,11 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
     name: "LoginPage",
     setup() {
-        return {};
+        return {
+            remember_me: ref(false),
+            password: ref(''),
+            isPwd: ref(true),
+        };
     },
     methods: {
         // preventSomeKeys(e) {
@@ -199,7 +124,27 @@ export default defineComponent({
 
 <style scoped>
 /* Set the placeholder color to white */
-.q-field--dense input::placeholder {
-    color: white;
+
+.q-field--outlined .q-field__control:after {
+    border: 0.2px solid #9ca0bb !important;
 }
+
+.q-field--dark .q-field__native,
+.q-field--dark .q-field__prefix,
+.q-field--dark .q-field__suffix,
+.q-field--dark .q-field__input {
+    color: white !important;
+}
+
+/* .q-table__top {
+ border-bottom: 0.5px solid #9ca0bb !important;
+}
+
+.q-checkbox__svg {
+ color: #9ca0bb !important;
+}
+
+.q-table__card--dark, .q-table--dark {
+ border-color: #9ca0bb !important;
+} */
 </style>
